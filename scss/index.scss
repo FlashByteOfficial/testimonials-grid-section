@@ -1,0 +1,97 @@
+@use "./base/variables";
+@use "./base/reset";
+
+body {
+  background-color: var(--neutral-light-grayish-blue);
+  position: relative;
+  font-size: 1.3rem;
+}
+main {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-white);
+
+  .testimonials {
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+    grid-template-rows: repeat(
+      auto-fit,
+      minmax(min(100px, fit-content), 150px)
+    );
+    max-width: 1000px;
+    min-width: 200px;
+    grid-gap: 2.5rem;
+
+    .testimonial {
+      border-radius: 10px;
+      padding: 2.5rem;
+      justify-self: start;
+      box-shadow: 10px 10px 10px 10px var(--neutral-light-grayish-blue);
+
+      &__header {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        margin-block-end: 2rem;
+        text-wrap: nowrap;
+      }
+
+      &__image {
+        width: 4.5rem;
+        border-radius: 50%;
+      }
+
+      &__status,
+      &__description {
+        color: rgba(255, 255, 255, 0.5);
+      }
+
+      &__heading {
+        margin-block-end: 1.5rem;
+      }
+    }
+
+    .testimonial:first-child {
+      background-color: var(--primary-moderate-violet);
+      grid-column: span 2;
+    }
+
+    .testimonial:nth-child(2) {
+      background-color: var(--primary-dark-grayish-blue);
+    }
+
+    .testimonial:nth-child(3),
+    .testimonial:nth-child(4) {
+      background-color: var(--primary-white);
+      color: var(--primary-dark-grayish-blue);
+
+      .testimonial__status,
+      .testimonial__description {
+        color: hsla(217, 19%, 35%, 0.5);
+      }
+    }
+
+    .testimonial:nth-child(3) {
+      grid-row: span 2;
+    }
+
+    .testimonial:last-child {
+      background-color: var(--primary-very-dark-blackish-blue);
+      grid-column: span 2;
+    }
+
+    @media (max-width: 480px) {
+      & {
+        display: block;
+        min-width: 290px;
+
+        .testimonial {
+          margin-block: 2rem;
+        }
+      }
+    }
+  }
+}

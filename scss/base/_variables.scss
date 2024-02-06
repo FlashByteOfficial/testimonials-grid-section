@@ -1,0 +1,25 @@
+:root {
+  // Fluid font-sizes
+  --step--2: clamp(0.7813rem, 0.7556rem + 0.1285cqi, 0.88rem);
+  --step--1: clamp(0.9375rem, 0.8952rem + 0.2114cqi, 1.1rem);
+  --step-0: clamp(1.125rem, 1.06rem + 0.3252cqi, 1.375rem);
+  --step-1: clamp(1.35rem, 1.2541rem + 0.4797cqi, 1.7188rem);
+  --step-2: clamp(1.62rem, 1.4825rem + 0.6874cqi, 2.1484rem);
+  --step-3: clamp(1.944rem, 1.7511rem + 0.9646cqi, 2.6855rem);
+  --step-4: clamp(2.3328rem, 2.0664rem + 1.3322cqi, 3.3569rem);
+  --step-5: clamp(2.7994rem, 2.436rem + 1.817cqi, 4.1962rem);
+
+  //   Primary Colors map
+  --primary-moderate-violet: hsl(263, 55%, 52%);
+  --primary-dark-grayish-blue: hsl(217, 19%, 35%);
+  --primary-very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --primary-white: hsl(0, 0%, 100%);
+
+  //   Neutral Colors
+  --neutral-light-gray: hsl(0, 0%, 81%);
+  --neutral-light-grayish-blue: hsl(210, 46%, 95%);
+
+  //   Breakpoints
+  --breakpoint-mobile: 375px;
+  --breakpoint-desktop: 1440px;
+}
